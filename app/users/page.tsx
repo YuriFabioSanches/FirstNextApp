@@ -1,6 +1,7 @@
 import React from 'react'
-import BackToHomeButton from '../components/BackToHome'
-import NewUserBtn from '../components/NewUserBtn'
+import Footer from '../components/Footer'
+import NavBarUser from '../components/NavBarUser';
+
 
 interface User {
   id: number,
@@ -14,9 +15,8 @@ const UsersPage = async () => {
 
   return (
     <>
-      <div className='grid grid-cols-2 p-4 my-4 text-xl text-center font-bold'>
-        <NewUserBtn></NewUserBtn>
-        <BackToHomeButton></BackToHomeButton>
+      <div className='grid grid-cols-1 text-xl text-center font-bold'>
+        <NavBarUser></NavBarUser>
       </div>
       <table className='table table-zebra p-4 my-4'>
         <thead className='text-center'>
@@ -25,7 +25,7 @@ const UsersPage = async () => {
             <th>Email</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className='text-center'>
           {users.map(user => 
           <tr key={user.id}>
             <td>{user.name}</td>
@@ -33,6 +33,7 @@ const UsersPage = async () => {
           </tr>)}
         </tbody>
       </table>
+      <Footer></Footer>
     </>
   )
 }

@@ -5,7 +5,7 @@ import React from 'react'
 const BackToHomeButton = () => {
   return (
     <div>
-      <Link className='btn btn-ghost btn-lg text-xl' href='/'>Back to Home</Link>
+      <Link className='btn btn-ghost btn-lg text-xl ' href='/home'>Home</Link>
     </div>
   )
 }

@@ -1,9 +1,10 @@
-import BtnUsers from "./components/BtnUsers";
+import LoginCard from "./components/LoginCard";
+
 
 export default function Home() {
   return (
     <main>
-      <BtnUsers></BtnUsers>
+      <LoginCard></LoginCard>
     </main>
   );
 }
